@@ -111,6 +111,8 @@ section.hero {
   box-sizing: border-box;
   margin-top: 15rem;
   column-gap: 6rem;
+  position: relative;
+  z-index: 10;
 }
 
 .vision .sec-img {
@@ -130,8 +132,6 @@ section.hero {
   padding-bottom: 5rem;
   box-sizing: border-box;
   margin-top: -20rem;
-  position: relative;
-  z-index: -1;
 }
 
 .prefoot .title {
@@ -175,14 +175,15 @@ footer .icon {
 }
 
 .logo-mob {
-  display: none;
-  background: white;
   padding: 1rem 1.75rem;
+  position: absolute;
+  z-index: 10;
 }
 
 @media (max-width: 480px) {
   .logo-mob {
-    display: block;
+    background: white;
+    position: static;
   }
 
   .title {
@@ -272,5 +273,9 @@ footer .icon {
     max-width: 100%;
     width: 100%;
     margin-top: 3.75rem;
+  }
+
+  .footer-item {
+    font-size: 1.25rem;
   }
 }
